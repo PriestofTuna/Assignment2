@@ -17,8 +17,8 @@ import javafx.stage.Stage;
 public class Assignment4 extends Application {
 	/**
 	 * Author, PriestofTuna requirements not yet met, javadoc initialization, I
-	 * just need to know where it is in eclipse Requirements 3 & 5 in the nova page
-	 * and least importantly UMLs, if there's extra time
+	 * just need to know where it is in eclipse Requirements 3 & 5 in the nova
+	 * page and least importantly UMLs, if there's extra time
 	 */
 
 	public static void main(String[] args) {
@@ -73,7 +73,7 @@ public class Assignment4 extends Application {
 						inputEmail, inputPassword);
 
 				inputUser.equalsIgnoreCase(inputUser);
-				
+
 				if (!inputPassword.equals(inputFirmPassword)) {
 					PassTxt.setStyle("-fx-background-color: red;");
 					FirmPassTxt.setStyle("-fx-background-color: red");
@@ -162,4 +162,30 @@ public class Assignment4 extends Application {
 
 	}
 
+	private boolean isValidEmail(String str) {
+		char firstCharacter = str.charAt(0);
+		int y = 0;
+		str.length();
+		while (y < str.length()) {
+			y++;
+			System.out.print(str.charAt(y));
+			if (str.charAt(y) == '@') {
+                if(isSpecial(str.charAt(y)) ) {
+                	
+                }
+			} else {
+
+			}
+
+		}
+		return false;
+
+	}
+	
+	private boolean isSpecial(char c){
+		return !(Character.isDigit(c) && Character.isAlphabetic(c));
+	}
+	
+	
+	
 }
